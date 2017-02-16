@@ -1,0 +1,32 @@
+body{}
+
+
+
+#heading{}
+
+
+
+#heading h1{
+	text-align: center;
+	font-family: sans-serif;
+};
+
+#input{}
+
+#input button{
+	display: block;
+	margin: 0 auto;
+	background: #f0f0f0;
+	border: none;
+	padding: 5px;
+}
+
+#input button:hover{
+	background: #ccc;
+}
+
+.gallery-img{
+	margin: 30px auto;
+	display: block;
+	max-width: 50%;
+}
