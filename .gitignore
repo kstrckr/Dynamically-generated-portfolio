@@ -17,3 +17,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Specific File
+example_from_treehouse.js
