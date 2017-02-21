@@ -4,8 +4,9 @@ let mainInput = document.getElementById("input01");
 
 let color = "gray";
 
-generateImageList(24);
+//generateImageList(24);
 
+/*
 let clickEvent = () => {
 	let elt = document.getElementsByTagName("body");
 	
@@ -15,7 +16,7 @@ let clickEvent = () => {
 	elt[0].style.background = color;
 	};
 }
-
+*/
 
 let createOutput = (i) => {
 	
@@ -35,11 +36,23 @@ let createOutput = (i) => {
 		
 	newPhoto.setAttribute("src", imgUrl);
 	
+	bgDiv.style.background = bgColor;
 	
+	bgDiv.className = "full-shot";
 	
-	newPhoto.className = "gallery-img";
+	numberHolder.className = "number";
+	
+	numberHolder.innerHTML = "<h3>" + (i+1) + "/" + galleryArray.length + "</h3>"
+	
+	imageHolder.className = "image-holder";
+	
+	newPhoto.className = "image-main";
+	
+	bgDiv.appendChild(numberHolder);
+	bgDiv.appendChild(imageHolder);
+	imageHolder.appendChild(newPhoto);
 		
-	target.appendChild(newPhoto);
+	target.appendChild(bgDiv);
 	
 	if (i === galleryArray.length-1){
 		//alert(imgUrl);
@@ -52,7 +65,7 @@ let createOutput = (i) => {
 };
 
 
-mainInput.addEventListener("click", clickEvent);
+//mainInput.addEventListener("click", clickEvent);
 
 createOutput(0);
 
