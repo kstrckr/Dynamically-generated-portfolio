@@ -1,32 +1,74 @@
-body{}
+body {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: 'Reem Kufi', sans-serif;
+	color: #fff;
+}
 
+header{
+	position:fixed;
+	padding: 0;
+	right: 15px;
+	z-index: 1;
+	font-size: .75em;
+	color: rgba(255,255,255,0.5);
+}
 
+a {
+	text-decoration: none;
+	color: rgba(255,255,255,0.5);
+}
 
-#heading{}
+a:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
 
+.full-shot{
+	display: inline-block;
+	width: 100%;
+}
 
-
-#heading h1{
-	text-align: center;
-	font-family: sans-serif;
-};
-
-#input{}
-
-#input button{
+.number {
+	font-size: 1.25em;
 	display: block;
+	width: 80%;
+	max-width: 1250px;
 	margin: 0 auto;
-	background: #f0f0f0;
-	border: none;
-	padding: 5px;
+	margin-top: 10px;
+	color: #fff;
+	z-index: 100;
 }
 
-#input button:hover{
-	background: #ccc;
+.number h3{
+	margin:0;
+	padding: 0;
+	opacity: 0.5;
 }
 
-.gallery-img{
-	margin: 30px auto;
+.image-holder{
+	width: 80%;
+	margin: 0 auto 60px auto;
 	display: block;
-	max-width: 50%;
+	max-width: 1040px;
+	position: relative;
+	box-shadow: 40px 50px 100px 25px rgba(0,0,0,.35);
+	
+}
+
+.image-main{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: block;
+	box-shadow: 75px 100px 150px 50px rgba(10,0,40,.3);
+	
+}
+
+.text-box{
+	position: absolute;
+	bottom: 10%;
+	right: 3%;
+	width: 25%;
 }

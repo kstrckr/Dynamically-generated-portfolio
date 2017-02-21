@@ -4,19 +4,6 @@ let mainInput = document.getElementById("input01");
 
 let color = "gray";
 
-let imageList = [];
-
-let generateImageList = (x) => {
-	
-	imageList.unshift(x);
-	x--;
-	if (x === 0){
-		return;
-	};
-	
-	generateImageList(x)
-};
-
 generateImageList(24);
 
 let clickEvent = () => {
@@ -29,13 +16,16 @@ let clickEvent = () => {
 	};
 }
 
+var galleryLength = galleryArray.length
+console.log(galleryLength);
+
 let createOutput = (i) => {
 	
 	let target = document.getElementById("output");
 	
 	let newPhoto = document.createElement("img");
 	
-	let imgUrl = "imgs/" + imageList[i] + ".jpg";
+	let imgUrl = "imgs/" + galleryArray[i];
 		
 	newPhoto.setAttribute("src", imgUrl);
 	
@@ -43,7 +33,7 @@ let createOutput = (i) => {
 		
 	target.appendChild(newPhoto);
 	
-	if (i === imageList.length-1){
+	if (i === galleryArray.length-1){
 		//alert(imgUrl);
 		return;
 	};
