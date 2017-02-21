@@ -16,18 +16,26 @@ let clickEvent = () => {
 	};
 }
 
-var galleryLength = galleryArray.length
-console.log(galleryLength);
 
 let createOutput = (i) => {
 	
 	let target = document.getElementById("output");
 	
+	let bgDiv = document.createElement("div");
+	
+	let numberHolder = document.createElement("div");
+	
+	let imageHolder = document.createElement("div");
+	
 	let newPhoto = document.createElement("img");
 	
 	let imgUrl = "imgs/" + galleryArray[i];
+	
+	let bgColor = "#" + galleryArray[i].substr(0,6);
 		
 	newPhoto.setAttribute("src", imgUrl);
+	
+	
 	
 	newPhoto.className = "gallery-img";
 		
@@ -47,5 +55,4 @@ let createOutput = (i) => {
 mainInput.addEventListener("click", clickEvent);
 
 createOutput(0);
-
 
