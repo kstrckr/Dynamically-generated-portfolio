@@ -15,10 +15,9 @@ let generateImageList = (x) => {
 
 
 const galleryArray = [
-	
 	"066243_07.jpg",
 	"142949_05.jpg",
-	"19A2E29_06.jpg",
+	"19A2E2_16.jpg",
 	"232730_18.jpg",
 	"3A4954_13.jpg",
 	"46130A_12.jpg",
@@ -40,6 +39,4 @@ const galleryArray = [
 	"F3C594_02.jpg",
 	"F4534C_03.jpg",
 	"F99338_09.jpg"
-
-	
 ];
