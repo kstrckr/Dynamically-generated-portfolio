@@ -20,15 +20,15 @@ let clickEvent = () => {
 
 
 //sorts galleryArray by file number (01, 02, 03, etc) so I don't have to re-order the images manually when adding new shots
-galleryArray.sort(function(a, b){
+galleryObj.sort(function(a, b){
 	
-	if(a.substr(-6,2) < b.substr(-6,2)) return -1;
-	if(a.substr(-6,2) > b.substr(-6,2)) return 1;
+	if(a.name.substr(-6,2) < b.name.substr(-6,2)) return -1;
+	if(a.name.substr(-6,2) > b.name.substr(-6,2)) return 1;
 	return 0;
 	
 });
 
-console.log(galleryArray);
+
 
 let createOutput = (i) => {
 	//targets the output div that already exists in index.html
@@ -44,10 +44,10 @@ let createOutput = (i) => {
 	let newPhoto = document.createElement("img");
 	
 	//defines the image URL based on file name stored in galleryArray
-	let imgUrl = "imgs/" + galleryArray[i];
+	let imgUrl = "imgs/" + galleryObj[i].name;
 	
 	//pulls the background color from the beginning of the file name of each element in galleryArray
-	let bgColor = "#" + galleryArray[i].substr(0,6);
+	let bgColor = galleryObj[i].color;
 	
 	//sets the <img src=
 	newPhoto.setAttribute("src", imgUrl);
