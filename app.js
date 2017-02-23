@@ -20,6 +20,7 @@ let clickEvent = () => {
 
 
 //sorts galleryArray by file number (01, 02, 03, etc) so I don't have to re-order the images manually when adding new shots
+
 galleryObj.sort(function(a, b){
 	
 	if(a.name.substr(-6,2) < b.name.substr(-6,2)) return -1;
