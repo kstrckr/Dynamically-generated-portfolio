@@ -1,29 +1,9 @@
-//let mainInput = document.getElementById("input01");
+const generatedGallery = [];
 
-//let clickEvent = () => {alert("Arrow working")};
-
-//let color = "gray";
-
-//generateImageList(24);
-
-/*
-let clickEvent = () => {
-	let elt = document.getElementsByTagName("body");
-
-	if (elt[0].style.background === color){
-		elt[0].style.background = "white"
-	} else{
-	elt[0].style.background = color;
-	};
-}
-*/
-
-
-//sorts galleryArray by file number (01, 02, 03, etc) so I don't have to re-order the images manually when adding new shots
-
+//creates an array of objects, each of which holds the .color and .name (hex color and file name)
 let galleryCreate = (array, index, output) => {
 	let tempObj = {};
-  tempObj.color = "#"+array[index].substr(0,6);
+  	tempObj.color = "#"+array[index].substr(0,6);
 	tempObj.name = array[index];
 	generatedGallery.push(tempObj);
 
@@ -35,6 +15,7 @@ let galleryCreate = (array, index, output) => {
 	galleryCreate(array, index+1, generatedGallery);
 };
 
+//sorts galleryArray by file number (01, 02, 03, etc) so I don't have to re-order the images manually when adding new shots
 let sortObj = (inputArray) => {
 
 	inputArray.sort(function(a, b){
@@ -45,6 +26,7 @@ let sortObj = (inputArray) => {
 
 	});
 };
+
 
 let createOutput = (i) => {
 	//targets the output div that already exists in index.html
