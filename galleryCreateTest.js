@@ -1,19 +1,3 @@
-// let imageList = [];
-
-/*
-let generateImageList = (x) => {
-
-	imageList.unshift(x);
-	x--;
-	if (x === 0){
-		return;
-	};
-
-	generateImageList(x)
-};
-*/
-
-
 const galleryArray = [
 	"066243_07.jpg",
 	"142949_05.jpg",
@@ -93,20 +77,18 @@ const galleryObj =[
 
 const generatedGallery = [];
 
-console.log(galleryObj[4].name)
+let galleryCreate = (array, index, output) => {
+	let tempObj = {};
+  tempObj.color = "#"+array[index].substr(0,6);
+	tempObj.name = array[index];
+	generatedGallery.push(tempObj);
 
-/*
-
-function printGalleryObj(array){
-
-	for(let i = 0; i<array.length; i++){
-
-		galleryObj[i] = "{ color: #" + array[i].substr(0,6) + ", name: " + array[i] + "}"
+	if (index === array.length-1){
+    console.log(output);
+		return;
 	}
 
-	console.log(galleryObj);
+	galleryCreate(array, index+1, generatedGallery);
 };
 
-printGalleryObj(galleryArray);
-
-*/
+galleryCreate(galleryArray, 0, generatedGallery);
