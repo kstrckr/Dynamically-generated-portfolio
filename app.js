@@ -12,7 +12,7 @@ let galleryCreate = (array, index, output) => {
 		return;
 	}
 
-	galleryCreate(array, index+1, generatedGallery);
+	galleryCreate(array, index+1, output)
 };
 
 //sorts galleryArray by file number (01, 02, 03, etc) so I don't have to re-order the images manually when adding new shots
