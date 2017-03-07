@@ -23,6 +23,41 @@ body {
     margin: 5px 0 10px 0px;    
 }
 
+/* jquery hamburger menu */
+.menu-btn div{
+    position:absolute;
+    left:0%;
+    top:64%;
+    padding-right: 8px;
+    margin-top: -0.5em;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: 200;
+    vertical-align: middle;
+    z-index: 99;
+}
+
+.menu-btn span{
+    display: block;
+    width: 19px;
+    height: 3px;
+    margin: 4px 0;
+    background: rgb(0,0,0);
+    z-index: 99;
+}
+
+.responsive-menu{
+    display: none;
+}
+
+.responsive-menu li{
+    list-style: none;
+}
+
+.expand{
+    display: block !important;
+}
+
 a {
 	text-decoration: none;
 	color: rgba(255,255,255,0.5);
@@ -145,5 +180,16 @@ a:hover{
    #header{
         background: blue;
     }
+    
+    .image-holder{
+        width: 90%;
+        margin: 0 auto 60px auto;
+        display: block;
+        max-width: 1200px;
+        position: relative;
+        box-shadow: 40px 50px 100px 25px rgba(0,0,0,.35);
+	
+    }
         }
- 
+
+

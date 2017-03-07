@@ -5,11 +5,27 @@
     <title>Kurt Strecker Code Louisville FEWD project</title>
     <link rel="stylesheet" href="style.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
       
       <div id="header">
         <h1>Kurt Strecker Photography</h1>
+          <div class="mobile-nav">
+              <div class="menu-btn" id ="menu-btn">
+                <div></div>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+              
+              <div class="responsive-menu">
+                <ul>
+                    <li>1. Object</li>
+                    <li>2. Object</li>
+                  </ul>
+              </div>
+            </div>
       </div>
 
 	  <div id="output">
@@ -18,5 +34,30 @@
 
 	  <script src="gallery_data.js"></script>
 	  <script src="app.js"></script>
+      
+
+<script type="text/javascript">
+	jQuery(function($){
+    	     $( '.menu-btn' ).click(function(){
+    	     $('.responsive-menu').toggleClass('expand')
+    	     })
+        })
+</script>
+
+<script type="text/javascript">
+	<script type="text/javascript">
+	jQuery(function($){
+    	$( '.menu-btn' ).click(function(){
+    		$('.responsive-menu').addClass('expand')
+    		$('.menu-btn').addClass('btn-none')
+    	})
+    	
+    	 $( '.close-btn' ).click(function(){
+    		$('.responsive-menu').removeClass('expand')
+    		$('.menu-btn').removeClass('btn-none')
+    	})
+  	})
+ </script>
+</script>
   </body>
 </html>
