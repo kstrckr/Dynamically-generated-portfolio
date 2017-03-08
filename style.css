@@ -20,7 +20,7 @@ body {
 }
 
 #header h1{
-    margin: 5px 0 10px 0px;    
+    margin: 5px 0 5px 0px;    
 }
 
 /* jquery hamburger menu */
@@ -36,15 +36,16 @@ body {
 }
 
 .menu-btn{
-    width: 30px;
-    margin: 0px auto 10px auto;
+    width: 50%;
+    margin: 0 auto;
+    padding: 3px 0;
 }
 
 .menu-btn span{
     display: block;
     width: 19px;
     height: 3px;
-    margin: 4px 0;
+    margin: 3px auto;
     background: rgb(0,0,0);
     z-index: 99;
 }
@@ -52,25 +53,30 @@ body {
 .responsive-menu{
     display: none;
     width: 100%;
-    background: grey;
 }
 
 .responsive-menu ul{
     margin: 0px auto;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 .responsive-menu li{
-    display:inline;
+    display:block;
     list-style: none;
     width: 150px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 5px 10px;
+    
+}
+
+.responsive-menu li a{
+    color: #000;
 }
 
 .expand{
     display: block !important;
     text-align: center;
+    padding: 3px;
 }
 
 a {
@@ -144,7 +150,11 @@ a:hover{
     }
     
     #header h1{
-        margin: 18px;
+        margin: 3px;
+    }
+    
+    .responsive-menu li{
+        display: inline;
     }
     
     .full-shot{
