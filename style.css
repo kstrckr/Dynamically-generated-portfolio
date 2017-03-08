@@ -26,15 +26,18 @@ body {
 /* jquery hamburger menu */
 .menu-btn div{
     position:absolute;
-    left:0%;
-    top:64%;
-    padding-right: 8px;
-    margin-top: -0.5em;
+    left:100%;
+    top:100%;
     line-height: 1.2;
     font-size: 18px;
     font-weight: 200;
     vertical-align: middle;
     z-index: 99;
+}
+
+.menu-btn{
+    width: 30px;
+    margin: 0px auto 10px auto;
 }
 
 .menu-btn span{
@@ -48,14 +51,26 @@ body {
 
 .responsive-menu{
     display: none;
+    width: 100%;
+    background: grey;
+}
+
+.responsive-menu ul{
+    margin: 0px auto;
+    padding: 10px 0;
 }
 
 .responsive-menu li{
+    display:inline;
     list-style: none;
+    width: 150px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .expand{
     display: block !important;
+    text-align: center;
 }
 
 a {
