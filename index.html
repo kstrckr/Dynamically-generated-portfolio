@@ -2,17 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>addEventListener testing</title>
+    <title>Kurt Strecker Code Louisville FEWD project</title>
     <link rel="stylesheet" href="style.css">
-    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
+    
   <body>
-	  
+      
+      <div id="header">
+        <h1>Kurt Strecker Photography</h1>
+          <div class="mobile-nav">
+              <div class="menu-btn" id ="menu-btn">
+               <!-- disabled for testing <div></div> -->
+                  <!-- menu icon -->
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+              <!-- Hamburger menu contents -->
+              <div class="responsive-menu">
+                <ul>
+                    <li>Fashion Still Life Photography. Louisville, KY</li>
+                    <li><a href="tel:502-468-7387">502-468-7387</a></li>
+                    <li><a hre="mailto:kurt@kurtstrecker.com" target="_top">kurt@kurtstrecker.com</a></li>
+                  </ul>
+              </div>
+            </div>
+      </div>
+
 	  <div id="output">
-	  <!-- generated image gallery goes here -->
+<!-- 
+generated image gallery goes here
+gallery is created by app.js based on contents of gallery_data.js
+-->
 	  </div>
-	  
-	  <script src="gallery_data.js"></script>
-	  <script src="app.js"></script>
+      
+<!-- gallery_data contains the array of image file names -->
+    <script src="gallery_data.js"></script>
+    <script src="app.js"></script>
+      
+<!-- jQuey hamburger menu code -->
+    <script type="text/javascript">
+        jQuery(function($){
+                 $( '.menu-btn' ).click(function(){
+                 $('.responsive-menu').toggleClass('expand')
+                 })
+            })
+    </script>
+
   </body>
 </html>
