@@ -168,11 +168,11 @@ a:hover{
     
     #header h1{
         font-size: 25px;
-        margin: 8px;
+        margin: 8px 20px;
     }
 	
 	.menu-btn{
-		margin: 8px 5px;
+		margin: 8px 20px;
 	}
 	
 	.responsive-menu{
