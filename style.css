@@ -15,7 +15,8 @@ body {
     margin-left: -44vw;
     text-align: center;
 	font-size: 16px;
-    background: rgba(128,128,128,1);
+    background: rgba(100,100,100,1);
+    box-shadow: 10px 10px 30px 10px rgba(10,0,40,.1);
 }
 
 #header h1{
@@ -55,7 +56,12 @@ body {
 
 .responsive-menu{
     display: none;
-    width: 100%;
+    width: 98%;
+    border-top: solid;
+    border-width: 1px;
+    border-color: rgba(0,0,0,0.15);
+    box-shadow: inset 3px 3px 10px rgba(10,0,40,.5)
+    
 }
 
 .responsive-menu ul{
