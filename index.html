@@ -14,7 +14,7 @@
         <h1>Kurt Strecker Photography</h1>
           <div class="mobile-nav">
               <div class="menu-btn" id ="menu-btn">
-                <div></div>
+               <!-- disabled for testing <div></div> -->
                   <!-- menu icon -->
                   <span></span>
                   <span></span>
@@ -32,22 +32,24 @@
       </div>
 
 	  <div id="output">
-<!-- generated image gallery goes here
-    gallery is created by app.js based on contents of gallery_data.js
+<!-- 
+generated image gallery goes here
+gallery is created by app.js based on contents of gallery_data.js
 -->
 	  </div>
-
-	  <script src="gallery_data.js"></script>
-	  <script src="app.js"></script>
+      
+<!-- gallery_data contains the array of image file names -->
+    <script src="gallery_data.js"></script>
+    <script src="app.js"></script>
       
 <!-- jQuey hamburger menu code -->
-<script type="text/javascript">
-	jQuery(function($){
-    	     $( '.menu-btn' ).click(function(){
-    	     $('.responsive-menu').toggleClass('expand')
-    	     })
-        })
-</script>
+    <script type="text/javascript">
+        jQuery(function($){
+                 $( '.menu-btn' ).click(function(){
+                 $('.responsive-menu').toggleClass('expand')
+                 })
+            })
+    </script>
 
   </body>
 </html>
