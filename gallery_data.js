@@ -1,3 +1,5 @@
+//an array of file names, adding a new image to the site is as easy as pasting it into the array and uploading it to /imgs
+
 const galleryArray = [
 	"066243_07.jpg",
 	"142949_05.jpg",

@@ -13,6 +13,7 @@ body {
     top:0;
     left: 50%;
     margin-left: -44vw;
+    margin-top: 3px;
     text-align: center;
 	font-size: 16px;
     background: rgba(100,100,100,1);
@@ -142,7 +143,7 @@ a:hover{
 }
 
 
-/* Media Queries */
+/* ----- Media Queries ----- */
 
 @media (min-width: 600px){
     #header{
@@ -161,11 +162,11 @@ a:hover{
     
     #header h1{
         font-size: 25px;
-        margin: 3px;
+        margin: 8px;
     }
 	
 	.menu-btn{
-		margin: 5px;;
+		margin: 8px 5px;
 	}
 	
 	.responsive-menu{
@@ -178,7 +179,7 @@ a:hover{
 	.responsive-menu ul{
 	
     margin: 0px auto;
-    padding: 10px 0;
+    padding: 13px 0;
 	}
     
     .responsive-menu li{
@@ -189,6 +190,10 @@ a:hover{
         margin: 0;
         display: inline-block;
         width: 100%;
+    }
+    
+    #output{
+        margin: 42px 0px;
     }
     
     .number {
