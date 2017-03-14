@@ -3,8 +3,9 @@ body {
     width: 100%;
 	margin: 0;
 	font-family: 'Reem Kufi', sans-serif;
-	color: #fff;
+	color: lightgrey;
 }
+
 
 #header{
 	position:fixed;
@@ -55,14 +56,14 @@ body {
     width: 19px;
     height: 3px;
     margin: 3px auto;
-    background: rgb(0,0,0);
+    background: lightgrey;
     z-index: 99;
 }
 
 .responsive-menu{
     display: none;
     width: 98%;
-    margin: 0 auto;
+    margin: 0 auto 1px auto;
     border-top: solid;
     border-bottom: solid;
     border-width: 1px;
@@ -86,7 +87,7 @@ body {
 }
 
 .responsive-menu li a{
-    color: #000;
+    color: lightgrey;
 }
 
 .expand{
@@ -162,7 +163,6 @@ a:hover{
         text-align: center;
         z-index: 1;
         font-size: .75em;
-        color: rgba(0,0,0,1);
         /*background: red;*/
     }
     
@@ -177,8 +177,9 @@ a:hover{
 	
 	.responsive-menu{
 		display: none;
-		width: 100%;
+		width: 95%;
 		height: 40px;
+        margin: 3px auto;
 		padding: 0;
 	}
 
