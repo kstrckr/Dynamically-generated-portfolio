@@ -152,7 +152,7 @@ a:hover{
 
 /* ----- Media Queries ----- */
 
-@media (min-width: 600px){
+@media (min-width: 1080px){
     #header{
         position:fixed;
         padding: 0;
@@ -241,7 +241,7 @@ a:hover{
     }
 }
 
-@media (min-width: 900px){
+@media (min-width: 1200px){
    #header{
         /*background: blue;*/
     }
