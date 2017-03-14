@@ -7,6 +7,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
+    
   <body>
       
       <div id="header">
@@ -14,11 +15,12 @@
           <div class="mobile-nav">
               <div class="menu-btn" id ="menu-btn">
                 <div></div>
+                  <!-- menu icon -->
                   <span></span>
                   <span></span>
                   <span></span>
               </div>
-              
+              <!-- Hamburger menu contents -->
               <div class="responsive-menu">
                 <ul>
                     <li>Fashion Still Life Photography. Louisville, KY</li>
@@ -30,13 +32,15 @@
       </div>
 
 	  <div id="output">
-	  <!-- generated image gallery goes here -->
+<!-- generated image gallery goes here
+    gallery is created by app.js based on contents of gallery_data.js
+-->
 	  </div>
 
 	  <script src="gallery_data.js"></script>
 	  <script src="app.js"></script>
       
-
+<!-- jQuey hamburger menu code -->
 <script type="text/javascript">
 	jQuery(function($){
     	     $( '.menu-btn' ).click(function(){
@@ -45,20 +49,5 @@
         })
 </script>
 
-<script type="text/javascript">
-	<script type="text/javascript">
-	jQuery(function($){
-    	$( '.menu-btn' ).click(function(){
-    		$('.responsive-menu').addClass('expand')
-    		$('.menu-btn').addClass('btn-none')
-    	})
-    	
-    	 $( '.close-btn' ).click(function(){
-    		$('.responsive-menu').removeClass('expand')
-    		$('.menu-btn').removeClass('btn-none')
-    	})
-  	})
- </script>
-</script>
   </body>
 </html>
