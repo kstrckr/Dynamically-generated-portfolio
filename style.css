@@ -26,7 +26,7 @@ body {
 
 #header h1{
 	float: left;
-    font-size: 16px;
+    font-size: 3em;
     margin: 5px 0 5px 0px;
 	padding: 0 0 0 5px;
 }
@@ -46,16 +46,18 @@ body {
 
 .menu-btn{
     
-	float: right;
-    margin: 0 auto;
-    padding: 3px 5px 3px 50px;
+	position: absolute;
+	right: 30px;
+	top: 8px;
+	height: 48px;
+    padding: 3px 5px 3px 90px;
 }
 
 .menu-btn span{
     display: block;
-    width: 19px;
-    height: 3px;
-    margin: 3px auto;
+    width: 40px;
+    height: 6px;
+    margin: 6px auto;
     background: lightgrey;
     z-index: 99;
 }
@@ -80,14 +82,18 @@ body {
 .responsive-menu li{
     display:block;
     list-style: none;
-    width: 150px;
-    margin: 0 auto;
-    padding: 5px 10px;
+    width: 700px;
+    margin:0 auto;
+	padding: 3px 0 0 0;
+	font-size: 2em;
     
 }
 
 .responsive-menu li a{
     color: lightgrey;
+	width: 100%;
+	display: block;
+	padding: 5px 0 0 0;
 }
 
 .expand{
@@ -172,25 +178,36 @@ a:hover{
     }
 	
 	.menu-btn{
-		margin: 8px 20px;
+	position: absolute;
+	right: 28px;
+	top: 0;
+	margin: 0;
+    padding: 1px 5px 1px 90px;
 	}
+	
+	.menu-btn span{
+    display: block;
+    width: 30px;
+    margin: 6px auto;
+    background: lightgrey;
+    z-index: 99;
+}
 	
 	.responsive-menu{
 		display: none;
 		width: 98%;
-		height: 40px;
+		height: 110px;
         margin: 3px auto;
 		padding: 0;
 	}
 
 	.responsive-menu ul{
-	
+	display: inline;
     margin: 0px auto;
     padding: 13px 0;
 	}
     
     .responsive-menu li{
-        display: inline;
     }
     
     .full-shot{
@@ -241,7 +258,7 @@ a:hover{
     }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1900px){
    #header{
         /*background: blue;*/
     }
