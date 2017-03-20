@@ -42,12 +42,16 @@ body {
 
 .gallery-select{
 	height: 30px;
-	background: #f0f0f0;
+	background: #8e8e8e;
 	border-style: solid;
-	border-radius: 1px;
-	border-color; #000;
+	border-width: 1px;
+	border-color: rgba(0,0,0,.2);
+	
 }
 
+.gallery-select:hover{
+	background: #d3d3d3;
+}
 /* jquery hamburger menu */
 
 /* .menu-btn div{

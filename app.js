@@ -97,6 +97,8 @@ let hideOrShow = (initiator, target) => {
 
 let allButtons = document.getElementsByClassName("gallery-select");
 
+hideOrShow(document.getElementById("show-shoes"), arrOfFullImages);
+
 Array.from(allButtons).forEach(function(element){
 	element.addEventListener("click", function(){
 		let buttonPressed = this;
