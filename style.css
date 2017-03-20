@@ -115,6 +115,7 @@ a:hover{
 
 .full-shot{
     margin: 3px 2px;
+	padding: 0;
 	display: block;
 	width: 100%;
 }

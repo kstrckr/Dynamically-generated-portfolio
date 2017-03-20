@@ -47,6 +47,7 @@ let createOutput = (i) => {
 
 	//this section sets up the class names for styling w/ style.css
 	bgDiv.className = "full-shot";
+	bgDiv.dataset.category = generatedGallery[i].category;
 
 	numberHolder.className = "number";
 
@@ -81,3 +82,25 @@ galleryCreate(galleryArray, 0, generatedGallery);
 console.log(generatedGallery);
 
 createOutput(0);
+
+let arrOfFullImages = document.getElementsByClassName("full-shot");
+
+let hideOrShow = (initiator, target) => {
+	for(let i = 0; i < target.length; i++){
+		if(target[i].dataset.category != initiator.dataset.category){
+			target[i].style.display = "none";
+		} else {
+			target[i].style.display = null;
+		}
+	}
+}
+
+let allButtons = document.getElementsByClassName("gallery-select");
+
+Array.from(allButtons).forEach(function(element){
+	element.addEventListener("click", function(){
+		let buttonPressed = this;
+		hideOrShow(buttonPressed, arrOfFullImages);
+		window.scrollTo(0,0);
+	});
+});
