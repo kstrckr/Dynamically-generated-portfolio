@@ -3,8 +3,9 @@ body {
     width: 100%;
 	margin: 0;
 	font-family: 'Reem Kufi', sans-serif;
-	color: #fff;
+	color: lightgrey;
 }
+
 
 #header{
 	position:fixed;
@@ -25,7 +26,7 @@ body {
 
 #header h1{
 	float: left;
-    font-size: 16px;
+    font-size: 3em;
     margin: 5px 0 5px 0px;
 	padding: 0 0 0 5px;
 }
@@ -45,24 +46,26 @@ body {
 
 .menu-btn{
     
-	float: right;
-    margin: 0 auto;
-    padding: 3px 5px 3px 50px;
+	position: absolute;
+	right: 30px;
+	top: 8px;
+	height: 48px;
+    padding: 3px 5px 3px 90px;
 }
 
 .menu-btn span{
     display: block;
-    width: 19px;
-    height: 3px;
-    margin: 3px auto;
-    background: rgb(0,0,0);
+    width: 40px;
+    height: 6px;
+    margin: 6px auto;
+    background: lightgrey;
     z-index: 99;
 }
 
 .responsive-menu{
     display: none;
     width: 98%;
-    margin: 0 auto;
+    margin: 0 auto 1px auto;
     border-top: solid;
     border-bottom: solid;
     border-width: 1px;
@@ -79,14 +82,18 @@ body {
 .responsive-menu li{
     display:block;
     list-style: none;
-    width: 150px;
-    margin: 0 auto;
-    padding: 5px 10px;
+    width: 700px;
+    margin:0 auto;
+	padding: 3px 0 0 0;
+	font-size: 2em;
     
 }
 
 .responsive-menu li a{
-    color: #000;
+    color: lightgrey;
+	width: 100%;
+	display: block;
+	padding: 5px 0 0 0;
 }
 
 .expand{
@@ -151,7 +158,7 @@ a:hover{
 
 /* ----- Media Queries ----- */
 
-@media (min-width: 600px){
+@media (min-width: 1080px){
     #header{
         position:fixed;
         padding: 0;
@@ -162,34 +169,45 @@ a:hover{
         text-align: center;
         z-index: 1;
         font-size: .75em;
-        color: rgba(0,0,0,1);
         /*background: red;*/
     }
     
     #header h1{
         font-size: 25px;
-        margin: 8px;
+        margin: 8px 20px;
     }
 	
 	.menu-btn{
-		margin: 8px 5px;
+	position: absolute;
+	right: 28px;
+	top: 0;
+	margin: 0;
+    padding: 1px 5px 1px 90px;
 	}
+	
+	.menu-btn span{
+    display: block;
+    width: 30px;
+    margin: 6px auto;
+    background: lightgrey;
+    z-index: 99;
+}
 	
 	.responsive-menu{
 		display: none;
-		width: 100%;
-		height: 40px;
+		width: 98%;
+		height: 110px;
+        margin: 3px auto;
 		padding: 0;
 	}
 
 	.responsive-menu ul{
-	
+	display: inline;
     margin: 0px auto;
     padding: 13px 0;
 	}
     
     .responsive-menu li{
-        display: inline;
     }
     
     .full-shot{
@@ -240,7 +258,7 @@ a:hover{
     }
 }
 
-@media (min-width: 900px){
+@media (min-width: 1900px){
    #header{
         /*background: blue;*/
     }
