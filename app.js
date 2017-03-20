@@ -5,7 +5,8 @@ let galleryCreate = (array, index, output) => {
 	let tempObj = {};
   	tempObj.color = "#"+array[index].substr(0,6);
 	tempObj.name = array[index];
-	generatedGallery.push(tempObj);
+	tempObj.category = array[index].substr(-5,1)
+	output.push(tempObj);
 
 	if (index === array.length-1){
     console.log(output);
@@ -13,18 +14,6 @@ let galleryCreate = (array, index, output) => {
 	}
 
 	galleryCreate(array, index+1, output)
-};
-
-//sorts galleryArray by file number (01, 02, 03, etc) so I don't have to re-order the images manually when adding new shots
-let sortObj = (inputArray) => {
-
-	inputArray.sort(function(a, b){
-
-	if(a.name.substr(-6,2) < b.name.substr(-6,2)) return -1;
-	if(a.name.substr(-6,2) > b.name.substr(-6,2)) return 1;
-	return 0;
-
-	});
 };
 
 
@@ -89,6 +78,6 @@ let createOutput = (i) => {
 
 galleryCreate(galleryArray, 0, generatedGallery);
 
-sortObj(generatedGallery);
+console.log(generatedGallery);
 
 createOutput(0);
