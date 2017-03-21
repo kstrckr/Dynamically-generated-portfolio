@@ -1,3 +1,5 @@
+$(document).foundation();
+
 const generatedGallery = [];
 
 //creates an array of objects, each of which holds the .color and .name (hex color and file name)
@@ -96,8 +98,11 @@ let hideOrShow = (initiator, target) => {
 }
 
 let allButtons = document.getElementsByClassName("gallery-select");
+console.log(allButtons);
 
 hideOrShow(document.getElementById("show-shoes"), arrOfFullImages);
+
+//document.getElementById("mask").style.display = "none";
 
 Array.from(allButtons).forEach(function(element){
 	element.addEventListener("click", function(){
