@@ -14,14 +14,16 @@ body {
 	background: #fff;
 }
 
-a {
-	text-decoration: none;
-	color: rgba(255,255,255,0.5);
+.title-bar{
+	min-width: 744px;
 }
 
-a:hover{
-	text-decoration: underline;
-	cursor: pointer;
+.title-bar .large{
+	margin:10px;
+}
+
+.menu-icon{
+	display:none;
 }
 
 .full-shot{
@@ -72,56 +74,19 @@ a:hover{
 /* ----- Media Queries ----- */
 
 @media (min-width: 1080px){
-    #header{
-        position:fixed;
-        padding: 0;
-        margin: 0 auto;
-        width: 100%;
-        left: 0;
-        display: inline-block;
-        text-align: center;
-        z-index: 1;
-        font-size: .75em;
-        /*background: red;*/
-    }
-    
-    #header h1{
-        font-size: 25px;
-        margin: 8px 20px;
-    }
-	
-	.menu-btn{
-	position: absolute;
-	right: 28px;
-	top: 0;
-	margin: 0;
-    padding: 1px 5px 1px 90px;
+   
+	.title-bar-title h1{
+		font-size: 1.5em;
 	}
 	
-	.menu-btn span{
-    display: block;
-    width: 30px;
-    margin: 6px auto;
-    background: lightgrey;
-    z-index: 99;
-}
-	
-	.responsive-menu{
-		display: none;
-		width: 98%;
-		height: 110px;
-        margin: 3px auto;
-		padding: 0;
+	.title-bar .large{
+	display:none;
 	}
 
-	.responsive-menu ul{
-	display: inline;
-    margin: 0px auto;
-    padding: 13px 0;
+	.menu-icon{
+		margin: 10px;
+		display:inline;
 	}
-    
-    .responsive-menu li{
-    }
     
     .full-shot{
         margin: 0;
@@ -172,9 +137,7 @@ a:hover{
 }
 
 @media (min-width: 1900px){
-   #header{
-        /*background: blue;*/
-    }
+
     
     .image-holder{
         width: 90%;
