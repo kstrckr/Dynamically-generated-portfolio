@@ -102,8 +102,6 @@ console.log(allButtons);
 
 hideOrShow(document.getElementById("show-shoes"), arrOfFullImages);
 
-//document.getElementById("mask").style.display = "none";
-
 Array.from(allButtons).forEach(function(element){
 	element.addEventListener("click", function(){
 		let buttonPressed = this;
