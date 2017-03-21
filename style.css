@@ -2,6 +2,7 @@ body {
 	position: relative;
     width: 100%;
 	margin: 0;
+	padding: 0;
 	font-family: 'Reem Kufi', sans-serif;
 	color: lightgrey;
 }
@@ -11,124 +12,6 @@ body {
 	width: 100%;
 	height: 100vh;
 	background: #fff;
-}
-
-
-#header{
-	position:fixed;
-    width: 90%;
-	min-width: 695px;
-    top:0;
-    left: 50%;
-    margin-left: -44vw;
-    margin-top: 3px;
-    text-align: center;
-	font-size: 1.05em;
-    background: rgba(100,100,100,1);
-    box-shadow: 10px 10px 30px 10px rgba(10,0,40,.1);
-    border: solid;
-    border-width: 1px;
-    border-color: rgba(0,0,0,0.15);
-}
-
-#header h1{
-	float: left;
-    font-size: 3em;
-    margin: 5px 0 10px 0px;
-	padding: 0 0 0 5px;
-}
-
-#button-holder{
-	width: 100%;
-	height: 45px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-}
-
-.gallery-select{
-	height: 30px;
-	background: #8e8e8e;
-	border-style: solid;
-	border-width: 1px;
-	border-color: rgba(0,0,0,.2);
-	
-}
-
-.gallery-select:hover{
-	background: #d3d3d3;
-}
-/* jquery hamburger menu */
-
-/* .menu-btn div{
-    position:absolute;
-    left:100%;
-    top:100%;
-    line-height: 1.2;
-    font-size: 18px;
-    font-weight: 200;
-    vertical-align: middle;
-    z-index: 99;
-} */
-
-.menu-btn{
-    
-	position: absolute;
-	right: 30px;
-	top: 8px;
-	height: 48px;
-    padding: 3px 5px 3px 90px;
-}
-
-.menu-btn span{
-    display: block;
-    width: 40px;
-    height: 6px;
-    margin: 6px auto;
-    background: lightgrey;
-    z-index: 99;
-}
-
-.responsive-menu{
-    display: none;
-    width: 98%;
-    margin: 0 auto 1px auto;
-    border-top: solid;
-    border-bottom: solid;
-    border-width: 1px;
-    border-color: rgba(0,0,0,0.15);
-    box-shadow: inset 3px 3px 10px rgba(10,0,40,.5)
-    
-}
-
-.responsive-menu ul{
-    margin: 0px auto;
-    padding: 15px 0;
-}
-
-.responsive-menu li{
-    display:block;
-    list-style: none;
-    width: 700px;
-    margin:0 auto;
-	padding: 3px 0 0 0;
-	font-size: 2em;
-    
-}
-
-.responsive-menu li a{
-    color: lightgrey;
-	width: 100%;
-	display: block;
-	padding: 5px 0 0 0;
-}
-
-.expand{
-	overflow: hidden;
-    display: block !important;
-    text-align: center;
-    padding: 3px;
 }
 
 a {
@@ -157,7 +40,7 @@ a:hover{
 }
 
 #output{
-    margin: 125px 0;
+    margin: 0;
     padding: 0;
 }
 
