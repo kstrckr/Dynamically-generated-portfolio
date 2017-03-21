@@ -77,28 +77,27 @@ let createOutput = (i) => {
 	createOutput(i);
 };
 
-//mainInput.addEventListener("click", clickEvent);
-
 galleryCreate(galleryArray, 0, generatedGallery);
-
-console.log(generatedGallery);
 
 createOutput(0);
 
 let arrOfFullImages = document.getElementsByClassName("full-shot");
 
 let hideOrShow = (initiator, target) => {
+    let hNumber = 1;
 	for(let i = 0; i < target.length; i++){
 		if(target[i].dataset.category != initiator.dataset.category){
 			target[i].style.display = "none";
 		} else {
 			target[i].style.display = null;
+            target[i].firstChild.innerHTML = "<h3>"+ hNumber + "</h3>";
+            hNumber++;
 		}
 	}
 }
 
 let allButtons = document.getElementsByClassName("gallery-select");
-console.log(allButtons);
+console.log(arrOfFullImages);
 
 hideOrShow(document.getElementById("show-shoes"), arrOfFullImages);
 
