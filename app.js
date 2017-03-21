@@ -77,7 +77,11 @@ let createOutput = (i) => {
 	createOutput(i);
 };
 
+
+
 galleryCreate(galleryArray, 0, generatedGallery);
+
+//console.log(generatedGallery);
 
 createOutput(0);
 
@@ -108,3 +112,9 @@ Array.from(allButtons).forEach(function(element){
 		window.scrollTo(0,0);
 	});
 });
+
+const load = () => {
+    document.getElementById("mask").style.display = "none";
+} 
+
+window.onload = load; 

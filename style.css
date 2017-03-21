@@ -7,6 +7,11 @@ body {
 	color: lightgrey;
 }
 
+#mask{
+    width: 100%;
+    height: 100vh
+}
+
 #topCanvas button{
 	font-size: 1.2em;
 	margin: 5px 0;
