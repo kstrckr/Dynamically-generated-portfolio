@@ -3,8 +3,12 @@ body {
     width: 100%;
 	margin: 0;
 	padding: 0;
-	font-family: 'Reem Kufi', sans-serif;
+	
 	color: lightgrey;
+}
+
+button, .fonted{
+	font-family: 'Raleway', sans-serif;
 }
 
 #mask{
@@ -13,11 +17,15 @@ body {
     width: 100%;
     height: 100vh;
     text-align: center;
-    background: #fff;
+    background: #000;
 }
 
 #mask h1{
     margin: 80px auto;
+}
+
+.top-shadow{
+	box-shadow: 0px -10px 0px rgba(0,0,0,1);
 }
 
 #topCanvas button{

@@ -114,8 +114,9 @@ Array.from(allButtons).forEach(function(element){
 });
 
 const loadDelete = () => {
-    var mask = document.getElementById("mask");
-    mask.parentNode.removeChild(mask);
+    //var mask = document.getElementById("mask");
+    //mask.parentNode.removeChild(mask);
+	document.getElementById("mask").style.display = "none";
 } 
 
 window.onload = loadDelete; 
