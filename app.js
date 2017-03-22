@@ -113,9 +113,9 @@ Array.from(allButtons).forEach(function(element){
 	});
 });
 
-const load = () => {
-    var element = document.getElementById("mask");
-    element.parentNode.removeChild(element);
+const loadDelete = () => {
+    var mask = document.getElementById("mask");
+    mask.parentNode.removeChild(mask);
 } 
 
-window.onload = load; 
+window.onload = loadDelete; 
