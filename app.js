@@ -114,7 +114,8 @@ Array.from(allButtons).forEach(function(element){
 });
 
 const load = () => {
-    document.getElementById("mask").style.display = "none";
+    var element = document.getElementById("mask");
+    element.parentNode.removeChild(element);
 } 
 
 window.onload = load; 
