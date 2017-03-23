@@ -26,8 +26,6 @@ let createOutput = (i) => {
 	//this section generates the divs that will be nested to create each gallery image
 	let bgDiv = document.createElement("div");
 
-	let numberHolder = document.createElement("div");
-
 	let imageHolder = document.createElement("div");
 
 	let newPhoto = document.createElement("img");
@@ -44,21 +42,20 @@ let createOutput = (i) => {
 	//sets the background color defined in file name
 	bgDiv.style.background = bgColor;
 
-	//dynamically creates the h3 content
-	numberHolder.innerHTML = "<h3>" + (i+1) + "/" + generatedGallery.length + "</h3>"
+
 
 	//this section sets up the class names for styling w/ style.css
 	bgDiv.className = "full-shot";
 	bgDiv.dataset.category = generatedGallery[i].category;
 
-	numberHolder.className = "number";
+
 
 	imageHolder.className = "image-holder";
 
 	newPhoto.className = "image-main";
 
 	//this section nests the divs in the proper order to create each gallery image w/ background and number
-	bgDiv.appendChild(numberHolder);
+
 	bgDiv.appendChild(imageHolder);
 	imageHolder.appendChild(newPhoto);
 
@@ -71,10 +68,9 @@ let createOutput = (i) => {
 		return;
 	};
 
-	//recurisve counter and call
-	i++
 
-	createOutput(i);
+
+	createOutput(i + 1);
 };
 
 
@@ -87,6 +83,7 @@ createOutput(0);
 
 let arrOfFullImages = document.getElementsByClassName("full-shot");
 
+
 let hideOrShow = (initiator, target) => {
     let hNumber = 1;
 	for(let i = 0; i < target.length; i++){
@@ -94,11 +91,10 @@ let hideOrShow = (initiator, target) => {
 			target[i].style.display = "none";
 		} else {
 			target[i].style.display = null;
-            target[i].firstChild.innerHTML = "<h3>"+ hNumber + "</h3>";
-            hNumber++;
 		}
 	}
 }
+
 
 let allButtons = document.getElementsByClassName("gallery-select");
 console.log(arrOfFullImages);
