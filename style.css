@@ -45,25 +45,17 @@ button, .fonted{
 	display:none;
 }
 
+#output{
+	display:inline;
+    margin: 0;
+    padding: 0;
+}
+
 .full-shot{
     margin: 3px 2px;
 	padding: 0;
 	display: block;
 	width: 100%;
-}
-
-.number {
-	display:none;
-}
-
-.number h3{
-    display:none;
-}
-
-#output{
-	display:inline;
-    margin: 0;
-    padding: 0;
 }
 
 .image-holder{
@@ -107,50 +99,24 @@ button, .fonted{
 	}
     
     .full-shot{
-        margin: 0;
+        margin: -4px 0;
         display: inline-block;
         width: 100%;
     }
     
-    #output{
-        margin: 42px 0px;
-    }
-    
-	
-    .number {
-        font-size: 1.25em;
-        display: block;
-        width: 80%;
-        max-width: 1250px;
-        margin: 0 auto;
-        margin-top: 10px;
-        color: #fff;
-        z-index: 100;
-    }
-    
-    .number h3{
-        display: block;
-        margin:0;
-        padding: 0;
-        opacity: 0.5;
-    }
-    
     .image-holder{
-        width: 80%;
-        margin: 0 auto 60px auto;
         display: block;
-        max-width: 1040px;
         position: relative;
-        box-shadow: 40px 50px 100px 25px rgba(0,0,0,.35);
 	
     }
 
     .image-main{
-        margin: 0;
+        margin: 30px auto;
         padding: 0;
         width: 100%;
+		max-width: 1040px;
         display: block;
-        box-shadow: 75px 100px 150px 50px rgba(10,0,40,.3);
+        box-shadow: 40px 50px 100px 25px rgba(0,0,0,.35), 75px 100px 150px 50px rgba(10,0,40,.3);
 
     }
 }
