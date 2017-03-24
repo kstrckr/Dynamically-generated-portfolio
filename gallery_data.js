@@ -20,7 +20,7 @@ const galleryArray = [
 	"714127_a.jpg",
 	"998565_h.jpg",
 	"c6a3af_h.jpg",
-	"c6df60_h.jpg",
+	"56819e_h.jpg",
 	"c58f56_j.jpg",
 	"c8912a_j.jpg",
 	"e5b18e_j.jpg",
