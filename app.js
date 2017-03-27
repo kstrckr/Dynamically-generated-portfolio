@@ -1,9 +1,21 @@
+//initialize foundation for off-canvas nav
 $(document).foundation();
 
+//--------Variables--------
+
+//will hold the final generated gallery for display
 const generatedGallery = [];
 
-//creates an array of objects, each of which holds the .color and .name (hex color and file name)
-let galleryCreate = (array, index, output) => {
+//holds all buttons for adding event listeners
+const allButtons = document.getElementsByClassName("gallery-select");
+
+//holds all generated image containers for use in hiding/showing matching categories
+const arrOfFullImages = document.getElementsByClassName("full-shot");
+
+//--------Function Expressions--------
+
+//creates an array of objects, each of which holds the .color and category (hex color and a, s, j, h for accessories, shoes, jewelry, homegoods)
+const galleryCreate = (array, index, output) => {
 	let tempObj = {};
   	tempObj.color = "#"+array[index].substr(0,6);
 	tempObj.name = array[index];
@@ -11,15 +23,14 @@ let galleryCreate = (array, index, output) => {
 	output.push(tempObj);
 
 	if (index === array.length-1){
-    console.log(output);
 		return;
 	}
 
 	galleryCreate(array, index+1, output)
 };
 
-
-let createOutput = (i) => {
+//generates the divs that will make up each individual shot
+const createOutput = (i) => {
 	//targets the output div that already exists in index.html
 	let target = document.getElementById("output");
 
@@ -42,13 +53,9 @@ let createOutput = (i) => {
 	//sets the background color defined in file name
 	bgDiv.style.background = bgColor;
 
-
-
 	//this section sets up the class names for styling w/ style.css
 	bgDiv.className = "full-shot";
 	bgDiv.dataset.category = generatedGallery[i].category;
-
-
 
 	imageHolder.className = "image-holder";
 
@@ -73,18 +80,15 @@ let createOutput = (i) => {
 	createOutput(i + 1);
 };
 
+//is called when all images are loaded, removes a #mask div that informs the user that the gallery is loading and prevents pop-in while image assets are loaded and their divs generated
+const deleteLoadingMask = () => {
+    //var mask = document.getElementById("mask");
+    //mask.parentNode.removeChild(mask);
+	document.getElementById("mask").style.display = "none";
+}
 
-
-galleryCreate(galleryArray, 0, generatedGallery);
-
-//console.log(generatedGallery);
-
-createOutput(0);
-
-let arrOfFullImages = document.getElementsByClassName("full-shot");
-
-
-let hideOrShow = (initiator, target) => {
+//is called by clicking the gallery selection buttons. Hides all non-matching cateogry images and shows all matches
+const hideOrShow = (initiator, target) => {
     let hNumber = 1;
 	for(let i = 0; i < target.length; i++){
 		if(target[i].dataset.category != initiator.dataset.category){
@@ -96,23 +100,23 @@ let hideOrShow = (initiator, target) => {
 }
 
 
-let allButtons = document.getElementsByClassName("gallery-select");
-console.log(arrOfFullImages);
+//--------Function Calls--------
 
+galleryCreate(galleryArray, 0, generatedGallery);
+
+createOutput(0);
+
+//initilily shows the Shoes gallery on load
 hideOrShow(document.getElementById("show-shoes"), arrOfFullImages);
 
+//adds event listener to all buttons
 Array.from(allButtons).forEach(function(element){
 	element.addEventListener("click", function(){
-		let buttonPressed = this;
-		hideOrShow(buttonPressed, arrOfFullImages);
+		let _this = this;
+		hideOrShow(_this, arrOfFullImages);
 		window.scrollTo(0,0);
 	});
 });
 
-const loadDelete = () => {
-    //var mask = document.getElementById("mask");
-    //mask.parentNode.removeChild(mask);
-	document.getElementById("mask").style.display = "none";
-} 
-
-window.onload = loadDelete; 
+//deletes the loadign mask when all page assets are loaded
+window.onload = deleteLoadingMask; 

@@ -1,3 +1,4 @@
+/* Mobile first approach, further @media queries tweak styling for progressively larger screens */
 body {
 	position: relative;
     width: 100%;
@@ -28,6 +29,7 @@ button, .fonted{
 	box-shadow: 0px -10px 0px rgba(0,0,0,1);
 }
 
+/* button in mobile size for off-canvas nav */
 #topCanvas button{
 	font-size: 1.2em;
 	margin: 5px 0;
