@@ -74,12 +74,12 @@ const createOutput = (i) => {
 	
 	//advances loading bar with each image load then fades and removes mask element when all images are loaded
 	newPhoto.onload = function(){
-		console.log(typeof(parseFloat(document.getElementById("progressBar").style.width)));
+		
 		let currentPercent = parseFloat(document.getElementById("progressBar").style.width)
-		console.log(currentPercent);
+		
 		let max = galleryArray.length;
 		let newPercent = currentPercent + 1/max*100;
-		console.log(newPercent);
+		
 		document.getElementById("progressBar").style.width = Math.floor(newPercent) + "%";
 		if (newPercent >= 95) {
 			setTimeout(()=>{document.getElementById("mask").style.opacity = "0"}, 250);
