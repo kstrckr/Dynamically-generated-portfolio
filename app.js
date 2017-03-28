@@ -73,19 +73,7 @@ const createOutput = (i) => {
 	target.appendChild(bgDiv);
 	
 	//advances loading bar with each image load then fades and removes mask element when all images are loaded
-	newPhoto.onload = function(){
-		
-		let currentPercent = parseFloat(document.getElementById("progressBar").style.width)
-		
-		let max = galleryArray.length;
-		let newPercent = currentPercent + 1/max*100;
-		
-		document.getElementById("progressBar").style.width = Math.floor(newPercent) + "%";
-		if (newPercent >= 95) {
-			setTimeout(()=>{document.getElementById("mask").style.opacity = "0"}, 250);
-			setTimeout(function(){document.getElementById("mask").style.display = "none"}, 2000);
-		}
-	}
+	newPhoto.onload = loadingBar;
 
 	//exits the recursive createOutput function at end of galleryArray
 	if (i === generatedGallery.length-1){
@@ -98,13 +86,20 @@ const createOutput = (i) => {
 	createOutput(i + 1);
 };
 
-//is called when all images are loaded, removes a #mask div that informs the user that the gallery is loading and prevents pop-in while image assets are loaded and their divs generated
-const deleteLoadingMask = () => {
-    //var mask = document.getElementById("mask");
-    //mask.parentNode.removeChild(mask);
-	
-	
-}
+//this function manages the loading bar and the removal of the loading screen when all images are displayed
+const loadingBar = () => {
+		
+		let currentPercent = parseFloat(document.getElementById("progressBar").style.width)
+		
+		let max = galleryArray.length;
+		let newPercent = currentPercent + 1/max*100;
+		
+		document.getElementById("progressBar").style.width = Math.floor(newPercent) + "%";
+		if (newPercent >= 95) {
+			setTimeout(()=>{document.getElementById("mask").style.opacity = "0"}, 250);
+			setTimeout(function(){document.getElementById("mask").style.display = "none"}, 2000);
+		}
+	}
 
 //is called by clicking the gallery selection buttons. Hides all non-matching cateogry images and shows all matches
 const hideOrShow = (initiator, target) => {
