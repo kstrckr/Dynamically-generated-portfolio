@@ -37,9 +37,11 @@
 				</div>
 			</div>
 <!-- loading mask that informs user the page is loading and hides pop-in. Deleted onload -->			
-		<div id="mask">
+		<div id="mask" style="opacity: 1; transition: all 1s ease-out">
 			<h1>Kurt Strecker Photography</h1>
-			<h1>loading...</h1>
+			<div id="loading">
+			<p>Loading:</p>	<span id="progressBar" style="width: 0%; transition: all 0.2s ease-out;"></span>
+			</div>
 		</div>
            
  

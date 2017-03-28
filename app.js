@@ -71,7 +71,15 @@ const createOutput = (i) => {
 
 	//appends the completed bgDiv to the output class in index.html
 	target.appendChild(bgDiv);
-	newPhoto.onload = console.log(newPhoto.getAttribute("src"));
+	newPhoto.onload = function(){
+		console.log(typeof(parseFloat(document.getElementById("progressBar").style.width)));
+		let currentPercent = parseFloat(document.getElementById("progressBar").style.width)
+		console.log(currentPercent);
+		let max = galleryArray.length;
+		let newPercent = currentPercent + 1/max*100;
+		console.log(newPercent);
+		document.getElementById("progressBar").style.width = Math.floor(newPercent) + "%";
+	}
 
 	//exits the recursive createOutput function at end of galleryArray
 	if (i === generatedGallery.length-1){
@@ -88,7 +96,8 @@ const createOutput = (i) => {
 const deleteLoadingMask = () => {
     //var mask = document.getElementById("mask");
     //mask.parentNode.removeChild(mask);
-	document.getElementById("mask").style.display = "none";
+	document.getElementById("mask").style.opacity = "0"
+	setTimeout(()=>{document.getElementById("mask").style.display = "none"}, 1000);
 }
 
 //is called by clicking the gallery selection buttons. Hides all non-matching cateogry images and shows all matches
