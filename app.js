@@ -1,4 +1,5 @@
-"use strict"
+"use strict";
+
 //initialize foundation for off-canvas nav
 $(document).foundation();
 
