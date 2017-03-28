@@ -1,3 +1,4 @@
+"use strict"
 //initialize foundation for off-canvas nav
 $(document).foundation();
 
@@ -11,6 +12,7 @@ const allButtons = document.getElementsByClassName("gallery-select");
 
 //holds all generated image containers for use in hiding/showing matching categories
 const arrOfFullImages = document.getElementsByClassName("full-shot");
+
 
 //--------Function Expressions--------
 
@@ -65,9 +67,11 @@ const createOutput = (i) => {
 
 	bgDiv.appendChild(imageHolder);
 	imageHolder.appendChild(newPhoto);
+	
 
 	//appends the completed bgDiv to the output class in index.html
 	target.appendChild(bgDiv);
+	newPhoto.onload = console.log(newPhoto.getAttribute("src"));
 
 	//exits the recursive createOutput function at end of galleryArray
 	if (i === generatedGallery.length-1){
@@ -112,8 +116,7 @@ hideOrShow(document.getElementById("show-shoes"), arrOfFullImages);
 //adds event listener to all buttons
 Array.from(allButtons).forEach(function(element){
 	element.addEventListener("click", function(){
-		let _this = this;
-		hideOrShow(_this, arrOfFullImages);
+		hideOrShow(this, arrOfFullImages);
 		window.scrollTo(0,0);
 	});
 });
