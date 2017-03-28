@@ -71,6 +71,8 @@ const createOutput = (i) => {
 
 	//appends the completed bgDiv to the output class in index.html
 	target.appendChild(bgDiv);
+	
+	//advances loading bar with each image load then fades and removes mask element when all images are loaded
 	newPhoto.onload = function(){
 		console.log(typeof(parseFloat(document.getElementById("progressBar").style.width)));
 		let currentPercent = parseFloat(document.getElementById("progressBar").style.width)
@@ -79,6 +81,10 @@ const createOutput = (i) => {
 		let newPercent = currentPercent + 1/max*100;
 		console.log(newPercent);
 		document.getElementById("progressBar").style.width = Math.floor(newPercent) + "%";
+		if (newPercent >= 95) {
+			setTimeout(()=>{document.getElementById("mask").style.opacity = "0"}, 250);
+			setTimeout(function(){document.getElementById("mask").style.display = "none"}, 2000);
+		}
 	}
 
 	//exits the recursive createOutput function at end of galleryArray
@@ -96,8 +102,8 @@ const createOutput = (i) => {
 const deleteLoadingMask = () => {
     //var mask = document.getElementById("mask");
     //mask.parentNode.removeChild(mask);
-	document.getElementById("mask").style.opacity = "0"
-	setTimeout(()=>{document.getElementById("mask").style.display = "none"}, 1000);
+	
+	
 }
 
 //is called by clicking the gallery selection buttons. Hides all non-matching cateogry images and shows all matches
@@ -129,6 +135,3 @@ Array.from(allButtons).forEach(function(element){
 		window.scrollTo(0,0);
 	});
 });
-
-//deletes the loadign mask when all page assets are loaded
-window.onload = deleteLoadingMask; 

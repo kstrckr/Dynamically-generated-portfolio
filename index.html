@@ -11,7 +11,13 @@
 	</head>
     
   <body>
-      
+      <!-- loading mask that informs user the page is loading and hides pop-in. Deleted onload -->			
+		<div id="mask" style="opacity: 1; transition: all 1.5s ease-out;">
+			<h1>Kurt Strecker Photography</h1>
+			<div id="loading">
+			<p>Loading:</p>	<span id="progressBar" style="width: 0%; transition: all 0.2s ease-out;"></span>
+			</div>
+		</div>
 
 <!-- off canvas navigation via Foundation 6 -->	  
 	  <div class="off-canvas position-top" data-off-canvas data-auto-focus="false" id="topCanvas">
@@ -36,13 +42,7 @@
 					</div>
 				</div>
 			</div>
-<!-- loading mask that informs user the page is loading and hides pop-in. Deleted onload -->			
-		<div id="mask" style="opacity: 1; transition: all 1s ease-out">
-			<h1>Kurt Strecker Photography</h1>
-			<div id="loading">
-			<p>Loading:</p>	<span id="progressBar" style="width: 0%; transition: all 0.2s ease-out;"></span>
-			</div>
-		</div>
+
            
  
 
