@@ -1,11 +1,16 @@
 "use strict";
 
+
+//ridiculous hack to fix 2 bugs with foundation static nav
+
 (function(){
 	if (window.innerWidth > 640){
 		//alert("Window is big");
 		document.getElementsByClassName("title-bar top-shadow")[0].dataset.options = "marginTop:0.09";
 	}
 }());
+
+
 
 //initialize foundation for off-canvas nav
 $(document).foundation();
@@ -89,8 +94,6 @@ const createOutput = (i) => {
 		return;
 	};
 
-
-
 	createOutput(i + 1);
 };
 
@@ -110,6 +113,7 @@ const loadingBar = () => {
 	}
 
 //is called by clicking the gallery selection buttons. Hides all non-matching cateogry images and shows all matches
+
 const hideOrShow = (initiator, target) => {
     let hNumber = 1;
 	for(let i = 0; i < target.length; i++){
@@ -132,6 +136,7 @@ createOutput(0);
 hideOrShow(document.getElementById("show-shoes"), arrOfFullImages);
 
 //adds event listener to all buttons
+
 Array.from(allButtons).forEach(function(element){
 	element.addEventListener("click", function(){
 		hideOrShow(this, arrOfFullImages);
