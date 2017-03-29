@@ -1,5 +1,12 @@
 "use strict";
 
+(function(){
+	if (window.innerWidth > 640){
+		//alert("Window is big");
+		document.getElementsByClassName("title-bar top-shadow")[0].dataset.options = "marginTop:0.09";
+	}
+}());
+
 //initialize foundation for off-canvas nav
 $(document).foundation();
 
@@ -131,3 +138,5 @@ Array.from(allButtons).forEach(function(element){
 		window.scrollTo(0,0);
 	});
 });
+
+
