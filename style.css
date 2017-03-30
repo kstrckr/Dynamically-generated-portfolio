@@ -1,4 +1,7 @@
-/* Mobile first approach, further @media queries tweak styling for progressively larger screens */
+/* Mobile first approach applied to anything under 1080px, further @media queries tweak styling for progressively larger screens */
+
+/* Elements/IDs/Classes are organzied from top to bottom as they appear in the HTML, including how they appear after the generated gallery is inserted */
+
 body {
 	position: relative;
     width: 100%;
@@ -107,6 +110,7 @@ button, .fonted{
 
 /* ----- Media Queries ----- */
 
+/* --- medium screens --- */
 @media (min-width: 1080px){
    
 	.title-bar-title{
@@ -162,7 +166,8 @@ button, .fonted{
 	}
 }
 
-@media (min-width: 1900px){
+/* --- large screens --- */
+@media (min-width: 1600px){
 
 	.image-main{
 		max-width: 1300px;
