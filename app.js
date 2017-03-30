@@ -106,10 +106,12 @@ const loadingBar = () => {
 		let newPercent = currentPercent + 1/max*100;
 		
 		document.getElementById("progressBar").style.width = Math.floor(newPercent) + "%";
+
 		if (newPercent >= 95) {
 			setTimeout(()=>{document.getElementById("mask").style.opacity = "0"}, 250);
 			setTimeout(function(){document.getElementById("mask").style.display = "none"}, 2000);
 		}
+
 	}
 
 //is called by clicking the gallery selection buttons. Hides all non-matching cateogry images and shows all matches

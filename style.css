@@ -77,10 +77,13 @@ button, .fonted{
 }
 
 .full-shot{
-    margin: 3px 2px;
+    margin: 0px 0px;
 	padding: 0;
 	display: block;
 	width: 100%;
+	border-bottom: solid;
+	border-color: #000;
+	border-width: 1px;
 }
 
 .image-holder{
@@ -153,13 +156,29 @@ button, .fonted{
 		position: fixed;
 		opacity: .2
 	}
+	
+	#copyright  p:first-child{
+		display: none;
+	}
 }
 
 @media (min-width: 1900px){
 
 	.image-main{
 		max-width: 1300px;
-		max-height: 90vh;
+		max-height: 85vh;
+	}
+	
+	#copyright{
+		background: #000;
+		opacity: 1;
+		padding: 8px 10px;
+		
+	}
+	
+	#copyright  p:first-child{
+		display: inline;
+		float: left;
 	}
 
         }

@@ -8,3 +8,5 @@ The photo's cateogry (Accessories, shoes jewelry, homegoods) and background colo
 
 Instruction: 
 download the project and open index.html
+
+view it live at [kurtstrecker.com/final_project](http://kurtstrecker.com/final_project/)
