@@ -155,7 +155,8 @@ button, .fonted{
 		padding: 0 10px;
 		text-align: right;
 	    width: 100%;
-		top: 95vh;
+		height: 50px;
+		top: calc(100vh - 50px);
 		display: block;
 		position: fixed;
 		opacity: .2
