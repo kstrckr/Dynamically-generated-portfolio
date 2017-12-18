@@ -48,6 +48,19 @@ button, .fonted{
 	background: #fff;
 }
 
+#content {
+	font-size: 0.75em;
+}
+
+#content a{
+	color: grey;
+}
+
+#content a:hover{
+	color:darkgrey;
+	text-decoration:underline;
+}
+
 
 .top-shadow{
 	box-shadow: 0px -10px 0px rgba(0,0,0,1);
